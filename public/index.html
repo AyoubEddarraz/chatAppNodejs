@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>Chat App with Nodejs + Socket.io</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="appLoad()">
+
+  <!-- chat App -->
+  <div class="chatApp row">
+
+    <!-- Aside -->
+    <div class="aside col-md-4 p-4">
+      <h2 class="asideTitle">chats</h2>
+      <div id="connectedUsers" class="connectedUsers my-4"></div>
+    </div>
+
+    <!-- Main -->
+    <div class="main col-md-8">
+      <div class="mainContainer">
+        <div class="head">
+          <div class="userItem m-0">
+            <div class="userImage">
+              <img src="./assets/images/user.jpg" alt="user image">
+            </div>
+            <div class="info">
+              <h5 id="name" class="name"></h5>
+              <h6 id="subName" class="subName my-1"></h6>
+            </div>
+          </div>
+        </div>
+
+        <div id="messages" class="messages mt-3 p-5"></div>
+
+        <div class="messageForm mt-3 px-5">
+          <div class="messageFormContainer">
+            <input id="messageInput" type="text" class="shadow-sm rounded">
+            <div class="send shodow-sm rounded">
+              <i id="sendMessage" class="bi bi-send"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/main.js"></script>
+
+
+</body>
+</html>
